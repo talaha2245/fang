@@ -1,0 +1,24 @@
+{
+  "name": "fang_predictor",
+  "version": "1.0.0",
+  "description": "\"this is used to predict the faang\"",
+  "license": "ISC",
+  "author": "Talaha",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10",
+    "tailwindcss": "^4.1.8"
+  }
+}

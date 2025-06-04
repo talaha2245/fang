@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Details</title>
+    <link href="/output.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div class="bg-white rounded-lg shadow-lg p-8 max-w-md w-full">
+        <h1 class="text-2xl font-bold mb-6 text-center text-blue-700">Enter Details</h1>
+        <form action="/fetch" method="post" class="space-y-4">
+            <div>
+                <input type="text" placeholder="Enter your LeetCode username" name="leetcode"
+                    class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            </div>
+
+            <div>
+                <span class="block font-medium mb-2 text-gray-700">College Tier</span>
+                <div class="flex gap-4">
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="collageTyre" value="tyre1" class="accent-blue-600" />
+                        Tyre 1
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="collageTyre" value="tyre2" class="accent-blue-600" />
+                        Tyre 2
+                    </label>
+                    <label class="flex items-center gap-2">
+                        <input type="radio" name="collageTyre" value="tyre3" class="accent-blue-600" />
+                        Tyre 3
+                    </label>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <input type="checkbox" name="know development" id="knowDev" class="accent-blue-600" />
+                <label for="knowDev" class="text-gray-700">I know development</label>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <input type="checkbox" name="haveprojects" id="projects" class="accent-blue-600" />
+                <label for="projects" class="text-gray-700">Have projects</label>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <input type="checkbox" name="havecsfundemntals" id="csfundamentals" class="accent-blue-600" />
+                <label for="csfundamentals" class="text-gray-700">Have CS fundamentals</label>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <input type="checkbox" name="done internsips" id="internships" class="accent-blue-600" />
+                <label for="internships" class="text-gray-700">Done internships</label>
+            </div>
+
+            <div class="pt-4">
+                <button type="submit"
+                    class="w-full bg-blue-700 hover:bg-blue-800 text-white font-semibold py-2 rounded transition duration-200">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
