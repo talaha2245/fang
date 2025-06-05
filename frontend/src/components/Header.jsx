@@ -3,9 +3,12 @@ import amazonLogo from '../assets/amazon.webp';
 import google from "../assets/Google.webp";
 import microsoft from '../assets/microsoft.webp';
 import meta from '../assets/meta.webp'
+import Navbar from './Navbar';
 
 function Header() {
   return (
+    <>
+    <Navbar></Navbar>
     <header className="bg-gradient-to-r from-red-600 to-emerald-400 shadow-md">
       <div className="max-w-3xl mx-auto px-4 py-6 flex flex-col items-center">
         {/* Logos Row */}
@@ -25,6 +28,8 @@ function Header() {
         </p>
       </div>
     </header>
+    
+    </>
   );
 }
 

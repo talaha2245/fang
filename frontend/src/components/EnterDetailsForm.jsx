@@ -31,7 +31,7 @@ function EnterDetailsForm({sendingdata , submitedform } ) {
         const data = await response.json();
         sendingdata(data)
         setResult(data);
-        console.log('Form submitted successfully:', formData);
+        // console.log('Form submitted successfully:', formData);
       } else {
         console.error('Form submission failed');
       }

@@ -1,6 +1,7 @@
 const express = require("express");
 const Routes = express.Router();
 // Ensure node-fetch is installed
+const userschema = require("../model/user.schema")
 
 const leetcoderating = (easy, med, hard) => {
     return Math.min(1500, (2 * easy + 5 * med + 10 * hard));
@@ -66,7 +67,8 @@ Routes.post("/", async (req, res) => {
         const leetcodehardsolved = data.hardSolved || 0;
 
         const rating = leetcoderating(leetcodeeasyproblems, leetcodemediumsolved, leetcodehardsolved);
-        const other = otherparms(collegeTierNum, dev, projects, csfundemt);
+        const other = otherparms(collegeTierNum, dev, projects, csfundemt)-300;
+
 
         const totalelo = (1.3 * rating + 0.7 * other);
         let elopercntage = (totalelo / 3000) * 100;
@@ -77,6 +79,13 @@ Routes.post("/", async (req, res) => {
             `the leetcode performance is ${rating}\n the othermatrix is ${other} \n the total elo is ${totalelo}\n the percentage scored is ${elopercntage}`
         );
         res.json({ rating,leetcodeeasyproblems, leetcodemediumsolved,leetcodehardsolved,other, totalelo, elopercntage });
+        // Save to database
+        await userschema.create({
+            username: leetcode,
+            leetcode: rating,
+            development: other,
+            Totalscore: totalelo
+        });
     } catch (err) {
         console.error(err);
         res.status(500).json({ error: "Internal server error" });
