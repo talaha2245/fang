@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const ConnectTodb = async () => {
     try {
-        const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/faang_predictor';
+        const mongoURI = process.env.MONGO_URI ;
         await mongoose.connect(mongoURI);
         console.log("Successfully connected to MongoDB");
     } catch (error) {
