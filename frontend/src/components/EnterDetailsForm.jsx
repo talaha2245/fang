@@ -20,7 +20,7 @@ function EnterDetailsForm({sendingdata , submitedform } ) {
     submitedform(1)
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:3006/fetch', {
+      const response = await fetch(`https://fang-nugo-talahas-projects.vercel.app/fetch`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

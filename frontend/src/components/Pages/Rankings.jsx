@@ -11,7 +11,7 @@ const Rankings = () => {
     try {
       setLoading(true);
       setError(null);
-      const response = await fetch('http://localhost:3006/ranking', {
+      const response = await fetch(`https://fang-nugo-talahas-projects.vercel.app/ranking`, {
         method: 'GET',
         headers: {
           'Accept': 'application/json',

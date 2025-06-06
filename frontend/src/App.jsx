@@ -4,6 +4,8 @@ import Home from './components/Pages/Home';
 import About from './components/Pages/About';
 import Rankings from './components/Pages/Rankings';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import dotenv from 'dotenv';
+// dotenv.config();
 
 
 const App = () => {
