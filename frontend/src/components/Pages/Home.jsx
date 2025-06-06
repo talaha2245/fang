@@ -1,7 +1,7 @@
 import React from 'react'
 import EnterDetailsForm from '../EnterDetailsForm';
 import LoadingSpeedometer from '../LoadingSpeedometer';
-import AmazingLoadingComponent from '../loading';
+import AmazingLoadingComponent from '../Loading';
 import Header from '../Header';
 import { useState } from "react";
 
