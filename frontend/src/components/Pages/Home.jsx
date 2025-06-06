@@ -6,7 +6,7 @@ import Header from '../Header';
 import { useState } from "react";
 
 function Home() {
-
+  
   const [data, setdata] = useState(null);
   const [loading, setloading] = useState(false);
   const [msg, setmsg] = useState(
